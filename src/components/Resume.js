@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Button } from '@mui/material/';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import { Document, Page, pdfjs } from 'react-pdf';
 import resumefile from "../assets/pdfs/resume.pdf"
+
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
 
 const Resume = () => {
 
