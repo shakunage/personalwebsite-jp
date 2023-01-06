@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-import "react-slideshow-image/dist/styles.css";
+import { useMediaQuery } from 'react-responsive'
 import styles from "../Slider.module.css";
 import background from "../assets/photos/slideshow/image1.jpeg"
+import mobilebackground from "../assets/photos/mobile_background.jpg"
 
 const Home = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
 
     return ( 
     <div className={styles.container}>
             <div className={styles.image}>
-              <div style={{ backgroundImage: `url(${background})` }}>
+              <div style={{ backgroundImage: isDesktop ? `url(${background})` : `url(${mobilebackground})`}}>
               <span>
                 Hi there!
                 <br></br>

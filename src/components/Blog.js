@@ -1,8 +1,13 @@
 import React from 'react';
 import { Box, Card, CardActionArea } from '@mui/material';
+import { useMediaQuery } from 'react-responsive'
 import blogpostdata from '../data/BlogpostData';
 
 const Blog = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
   
   return (
     <>
@@ -11,22 +16,22 @@ const Blog = () => {
         flexDirection: 'column',
         justifyContent: "start",
         height:"100vh",
-        width: "60%"}}>
+        width: isDesktop ? "60%" : "50%"}}>
           
         <h1>blog</h1>
         {blogpostdata.map((blog, index)=> (
           <Card sx={{marginBottom: 5}} key={index}>
             <CardActionArea href={`/blogs/${blog.id}`}>
             <div style={{margin: 5}}>
-            <h2>{blog.title}</h2>
             <span style={{float: "right"}}>
-              <br></br>
               {new Date(blog.date).toLocaleString('en-CA', 
                 {month: 'short',
                   day: 'numeric',
                   year: 'numeric'}
                 )}
             </span>
+            <br></br>
+            <h2>{blog.title}</h2>
            {blog.shortdesc} 
             </div>
             </CardActionArea>

@@ -11,7 +11,6 @@ import Resume from "./components/Resume";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
-
 import blogpostdata from "./data/BlogpostData";
 
 const App = () => {

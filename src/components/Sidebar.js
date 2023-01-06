@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
-import { Stack, Box, Typography, Icon } from "@mui/material";
+import { Stack, Box, Icon } from "@mui/material";
 import { Telegram, LinkedIn, GitHub } from '@mui/icons-material/';
+import { useMediaQuery } from 'react-responsive'
 import lineicon from "../assets/lineicon/lineicon.svg"
 import headshot from "../assets/photos/profilephoto/img_web1.jpg"
 
 const Sidebar = () => {
 
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
+
   const routerLinkStyle = {
-    padding: 10,
+    padding: "0.8rem",
     color: "inherit",
     textDecoration: "inherit",
-  };
-
-  const nameSpacing = {
-    marginLeft: 20,
-    marginRight: 20,
+    fontSize: isDesktop ? 20 : 18
   };
 
   return (
@@ -24,54 +25,60 @@ const Sidebar = () => {
         bgcolor: '#e3e3e3',
         flexGrow: "0",
         height: "100vh",
-        m: "5",
         alignItems: "center",
-        width: "20%"
+        width: isDesktop ? "20%" : "45%"
         }}>
 
       <img 
         src={headshot}  
-        style={{width: 135, height: 180, borderRadius: 200/2, padding: 10}}
+        style={{
+          width: isDesktop ? "11.25rem" : "6rem", 
+          height: isDesktop ? "15rem" : "8rem", 
+          borderRadius: isDesktop ? "10rem" : "5.25rem", 
+          padding: isDesktop ? "1rem" : "0.525rem"}}
         alt="headshot" 
       />
 
-      <Typography style={nameSpacing} variant="name">Veikka Sakari </Typography>
-      <Typography style={nameSpacing} variant="name">Junttila</Typography>
+      <center style={{fontSize: isDesktop ? 30 : 24}}>
+        Veikka Sakari
+        <br></br> 
+        Junttila
+      </center>
 
       <br></br>
 
       <Link style={routerLinkStyle} to="/">
-        <Typography variant="link">home</Typography>
+        home
       </Link>
 
       <Link style={routerLinkStyle} to="/about">
-      <Typography variant="link">about me</Typography>
+        about me
       </Link>
 
       <Link style={routerLinkStyle} to="/resume">
-      <Typography variant="link">resume</Typography>
+        resume
       </Link>
       
       <Link style={routerLinkStyle} to="/portfolio">
-      <Typography variant="link">portfolio</Typography>
+        portfolio
       </Link>
 
       <Link style={routerLinkStyle} to="/blog">
-      <Typography variant="link">blog</Typography>
+          blog
       </Link>
 
       <Link style={routerLinkStyle} to="/gallery">
-      <Typography variant="link">gallery</Typography>
+          gallery
       </Link>
 
       <Link style={routerLinkStyle} to="/contact">
-      <Typography variant="link">contact</Typography>
+          contact
       </Link>
       
       <br></br>
 
       <Stack
-      direction="row" spacing={2}>
+      direction="row" spacing={isDesktop ? "1rem" : "0.5rem"}>
         <a style={{color: "inherit"}} href="https://github.com/shakunage" target="_blank" rel="noreferrer noopener"><GitHub /></a>
         <a style={{color: "inherit"}} href="https://www.linkedin.com/in/veikka-sakari-junttila/" target="_blank" rel="noreferrer noopener">< LinkedIn/></a>
         <a style={{color: "inherit"}} href="https://t.me/veikkasj" target="_blank" rel="noreferrer noopener"><Telegram /></a>

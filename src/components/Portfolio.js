@@ -1,11 +1,15 @@
 import React from 'react';
 import { Box, Card, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
-
+import { useMediaQuery } from 'react-responsive'
 import portfoliodata from "../data/PortofolioData"
 
 
 const Portfolio = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
   
   return (
     <>
@@ -15,7 +19,7 @@ const Portfolio = () => {
         flexDirection: 'columnm',
         justifyContent: "start",
         height:"100vh",
-        width: "60%"}}>
+        width: isDesktop ? "60%" : "50%"}}>
           
         <h1>portfolio</h1>
         Some of my data and software projects. All of these projects demonstrate the skills I've gained during my Master's studies in Business Analytics.

@@ -1,9 +1,15 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { Link } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
+
 
 
 const About = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
 
   return (
     <>
@@ -12,7 +18,7 @@ const About = () => {
           flexDirection: 'column',
           height:"100vh",
           justifyContent: "start",
-          width:"60%"}}>
+          width: isDesktop ? "60%" : "50%"}}>
         <h1>about me</h1>
         <p></p>
           Hi there. 👋

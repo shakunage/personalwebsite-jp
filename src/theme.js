@@ -6,13 +6,13 @@ const theme = createTheme({
             fontFamily: [
                 'Montserrat'
             ].join(','),
-            fontSize: 32
+            fontSize: "2rem"
         },
         link: {
             fontFamily: [
                 'montserrat'
             ].join(','),
-            fontSize: 22
+            fontSize: "1.4rem"
         }
       },
     palette: {

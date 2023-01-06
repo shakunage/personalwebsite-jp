@@ -1,11 +1,16 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import "react-slideshow-image/dist/styles.css";
 import { Slide } from 'react-slideshow-image';
+import { useMediaQuery } from 'react-responsive'
+import "react-slideshow-image/dist/styles.css";
 import styles from "../Slider.module.css";
 import imagedata from "../data/ImageData"
 
 const Gallery = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
   
   return (
     <>
@@ -14,7 +19,7 @@ const Gallery = () => {
         flexDirection: 'column',
         justifyContent: "start",
         height:"100vh",
-        width: "60%"}}>
+        width: isDesktop ? "60%" : "50%"}}>
           
         <h1>gallery</h1>
 

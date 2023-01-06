@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { Input, Button, TextField, Box } from '@mui/material'
+import { useMediaQuery } from 'react-responsive'
+
 
 
 const FORM_ENDPOINT = process.env.REACT_APP_HEROTOFU_KEY
 
 const ContactForm = () => {
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)'
+  })
+
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = () => {
     setTimeout(() => {
@@ -29,7 +36,7 @@ const ContactForm = () => {
       flexDirection: 'column',
       justifyContent: "start",
       height:"100vh",
-      width: "60%"}}>
+      width: isDesktop ? "60%" : "50%"}}>
       <h1>contact form</h1>
       <form
       action={FORM_ENDPOINT}
