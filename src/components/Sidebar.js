@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Stack, Box, Icon } from "@mui/material";
 import { Telegram, LinkedIn, GitHub } from '@mui/icons-material/';
 import { useMediaQuery } from 'react-responsive'
@@ -11,6 +11,8 @@ const Sidebar = () => {
     query: '(min-width: 1024px)'
   })
 
+  const location = useLocation();
+
   const routerLinkStyle = {
     padding: "0.8rem",
     color: "inherit",
@@ -18,7 +20,9 @@ const Sidebar = () => {
     fontSize: isDesktop ? 20 : 18
   };
 
-  return (
+  if ((location.pathname !== "/") && !isDesktop) {
+    return null
+  } else { return (
     <Box sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -48,7 +52,7 @@ const Sidebar = () => {
       <br></br>
 
       <Link style={routerLinkStyle} to="/">
-        home
+        <span style={{display: isDesktop ? "block" : "none"}}>home</span>
       </Link>
 
       <Link style={routerLinkStyle} to="/about">
@@ -86,7 +90,7 @@ const Sidebar = () => {
       </Stack>
 
     </Box>
-  );
+  ); }
 };
 
 export default Sidebar;

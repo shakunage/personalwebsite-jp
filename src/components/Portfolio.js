@@ -19,7 +19,7 @@ const Portfolio = () => {
         flexDirection: 'columnm',
         justifyContent: "start",
         height:"100vh",
-        width: isDesktop ? "60%" : "50%"}}>
+        width: isDesktop ? "60%" : "90%"}}>
           
         <h1>portfolio</h1>
         Some of my data and software projects. All of these projects demonstrate the skills I've gained during my Master's studies in Business Analytics.

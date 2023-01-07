@@ -2,7 +2,6 @@ import { Routes, Route, useMatch } from "react-router-dom";
 import React, { useEffect } from 'react';
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import theme from './theme';
-import Sidebar from "./components/Sidebar";
 import Portfolio from "./components/Portfolio";
 import Blog from "./components/Blog";
 import Home from "./components/Home";
@@ -12,6 +11,8 @@ import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
 import blogpostdata from "./data/BlogpostData";
+import Sidebar from "./components/Sidebar";
+import TopBar from "./components/TopBar";
 
 const App = () => {
 
@@ -27,9 +28,10 @@ const App = () => {
 
   return (
       <ThemeProvider theme={theme}>
-      <CssBaseline/> 
+      <CssBaseline/>
+      <TopBar/>
       <Box sx={{display: "flex", flexDirection: "row"}}>
-        <Sidebar/>
+      <Sidebar /> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

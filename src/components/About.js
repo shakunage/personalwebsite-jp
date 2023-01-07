@@ -18,7 +18,7 @@ const About = () => {
           flexDirection: 'column',
           height:"100vh",
           justifyContent: "start",
-          width: isDesktop ? "60%" : "50%"}}>
+          width: isDesktop ? "60%" : "90%"}}>
         <h1>about me</h1>
         <p></p>
           Hi there. 👋

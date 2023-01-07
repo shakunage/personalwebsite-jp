@@ -36,7 +36,7 @@ const ContactForm = () => {
       flexDirection: 'column',
       justifyContent: "start",
       height:"100vh",
-      width: isDesktop ? "60%" : "50%"}}>
+      width: isDesktop ? "60%" : "90%"}}>
       <h1>contact form</h1>
       <form
       action={FORM_ENDPOINT}

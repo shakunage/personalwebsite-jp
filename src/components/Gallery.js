@@ -3,7 +3,6 @@ import { Box } from '@mui/material';
 import { Slide } from 'react-slideshow-image';
 import { useMediaQuery } from 'react-responsive'
 import "react-slideshow-image/dist/styles.css";
-import styles from "../Slider.module.css";
 import imagedata from "../data/ImageData"
 
 const Gallery = () => {
@@ -19,18 +18,26 @@ const Gallery = () => {
         flexDirection: 'column',
         justifyContent: "start",
         height:"100vh",
-        width: isDesktop ? "60%" : "50%"}}>
+        width: isDesktop ? "60%" : "90%"}}>
           
         <h1>gallery</h1>
 
-        <div className="slide-container">
+        <div>
         <Slide
           autoplay={false}
           indicators
           >
          {imagedata.map((slideImage, index)=> (
-            <div className={styles.image} key={index}>
-              <div style={{'backgroundImage': `url(${slideImage.img})`}}>
+            <div key={index}>
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                aspectRatio: 4/3, 
+                'backgroundImage': `url(${slideImage.img})`}}>
+                  
                 <span>{slideImage.caption}</span>
               </div>
               <center>{slideImage.alt}</center>

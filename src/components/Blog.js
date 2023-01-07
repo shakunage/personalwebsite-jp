@@ -16,7 +16,7 @@ const Blog = () => {
         flexDirection: 'column',
         justifyContent: "start",
         height:"100vh",
-        width: isDesktop ? "60%" : "50%"}}>
+        width: isDesktop ? "60%" : "90%"}}>
           
         <h1>blog</h1>
         {blogpostdata.map((blog, index)=> (

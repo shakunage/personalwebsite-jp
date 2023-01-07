@@ -21,11 +21,11 @@ const Resume = () => {
         flexDirection: 'column',
         justifyContent: "start",
         height:"100vh",
-        width: isDesktop ? "60%" : "50%"}}>
+        width: isDesktop ? "60%" : "90%"}}>
         <h1>resume</h1>
         <Button style={{justifyContent: "flex-start"}}><a style={{color: "inherit", textDecoration: "inherit"}} href={resumefile} download>download resume</a></Button>
         <Document file={resumefile}>
-        <Page width={isDesktop ? 550 : 175} pageNumber={1} />
+        <Page width={isDesktop ? 550 : 350} pageNumber={1} />
         </Document>
       </Box>
     </>
