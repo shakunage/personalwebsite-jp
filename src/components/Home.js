@@ -38,6 +38,8 @@ const Home = () => {
                 <br></br>
                 I'm Sakari.
                 <br></br>
+                This is the Japanese version of my website.
+                <br></br>
                 <Link style={{color: "inherit"}} to="/about">Learn more...</Link>
               </span>
               </div>
