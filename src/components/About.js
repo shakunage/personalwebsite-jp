@@ -1,9 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive'
-
-
 
 const About = () => {
 
@@ -19,29 +16,22 @@ const About = () => {
           height:"100vh",
           justifyContent: "start",
           width: isDesktop ? "60%" : "90%"}}>
-        <h1>about me</h1>
+        <h1>私について</h1>
         <p></p>
-          Hi there. 👋
+          どうも. 👋
         <p>
-          I’m Veikka Sakari Junttila, and this is my personal website. You can call me Sakari – that’s what I go by in daily life. Currently, I’m looking for a role as a business analyst. 
+          Veikka Sakari Junttila（ベイッカ・サカリ・ユンテラ）と申します。普通はミドルネームのサカリと名乗ります。現在はビジネスアナリストとしての活躍を目指しています。
         </p>
-  
+          現在は日本在住で、外国語青年招致事業の関係で島根県の自治体の教育委員会で働いております。日本語・英語・フィンランド語３ヶ国語流暢です。
         <p>
-          My skills most relevant skills with regards to employment include technology, langauge skills and business knowledge. I hold a bachelor’s degree in business administration, will soon finish completing a master’s degree in Business Analytics. I speak English and Japanese fluently, as well as my mother tongue Finnish.
+          ビジネスやITに興味を持ち、大学で国際ビジネスを専攻し卒業して、大学院の情報システム研究科に入学して、現在リモートで学業を進めて、今年卒業予定です。
         </p>
-
         <p>
-          You can check out <Link to="/portfolio">my portfolio here</Link>, where I introduce some of my data and software projects. From the <Link to="/blog">the blog</Link>, you can check out some of my thoughts on recent business events, technology and life in Japan. 
+          左側のサイドバーにGitHubポートフォリオのリンクが貼っており、RやPythonなどのプログラミング言語を使ったプロジェクトが紹介されています。SNSのリンクまたはメールの連絡申込をご自由にお使いください。
         </p>
-
         <p>
-          My other interests include photography, feel free to check out <Link to="/gallery">the gallery</Link> for some photos I’ve taken around Japan. I am also an avid follower of sports, namely NHL and Formula 1, both of which can be understood better when you have a grasp of the data that those generate. I’ve been also playing a team sport called floorball all my life, and hit the gym regularly to stay in shape. 
+          どうぞ、よろしくお願いします。
         </p>
-
-        <p>
-          If you’re interested, feel free to reach me out by email using <Link to="/contact">the contact form</Link>. You can also use any of the social media links in the sidebar on the left. 
-        </p>
-    
     </Box>
   </>
   )

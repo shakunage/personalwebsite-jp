@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive'
-import background from "../assets/photos/slideshow/image1.jpeg"
-import mobilebackground from "../assets/photos/mobile_background.jpg"
+import background from "../assets/photos/slideshow/image2.jpeg"
+import mobilebackground from "../assets/photos/slideshow/image2.jpeg"
 
 const Home = () => {
 
@@ -27,20 +26,15 @@ const Home = () => {
 
               <span style={{
                   padding: "0.5rem",
-                  fontSize: isDesktop ? "2.5rem" : "1rem",
+                  fontSize: isDesktop ? "2.5rem" : "2rem",
                   background: "#efefef",
                   position: "fixed",
                   right: "10%",
-                  top: "10%"
+                  top: "5%",
+                  writingMode: "vertical-lr",
+                  opacity: "90%"
                 }}>
-
-                Hi there!
-                <br></br>
-                I'm Sakari.
-                <br></br>
-                This is the Japanese version of my website.
-                <br></br>
-                <Link style={{color: "inherit"}} to="/about">Learn more...</Link>
+                どうも。サカリです。
               </span>
               </div>
             </div>

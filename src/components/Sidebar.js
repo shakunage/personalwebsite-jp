@@ -17,7 +17,7 @@ const Sidebar = () => {
     padding: "0.8rem",
     color: "inherit",
     textDecoration: "inherit",
-    fontSize: isDesktop ? 20 : 18
+    fontSize: isDesktop ? 20 : 16
   };
 
   if ((location.pathname !== "/") && !isDesktop) {
@@ -52,31 +52,21 @@ const Sidebar = () => {
       <br></br>
 
       <Link style={routerLinkStyle} to="/">
-        <span style={{display: isDesktop ? "block" : "none"}}>home</span>
+        <span style={{display: isDesktop ? "block" : "none"}}>
+          トップページ
+        </span>
       </Link>
 
       <Link style={routerLinkStyle} to="/about">
-        about me
+        私について
       </Link>
 
       <Link style={routerLinkStyle} to="/resume">
-        resume
-      </Link>
-      
-      <Link style={routerLinkStyle} to="/portfolio">
-        portfolio
-      </Link>
-
-      <Link style={routerLinkStyle} to="/blog">
-          blog
-      </Link>
-
-      <Link style={routerLinkStyle} to="/gallery">
-          gallery
+        履歴
       </Link>
 
       <Link style={routerLinkStyle} to="/contact">
-          contact
+          連絡申込
       </Link>
       
       <br></br>
@@ -88,7 +78,8 @@ const Sidebar = () => {
         <a style={{color: "inherit"}} href="https://t.me/veikkasj" target="_blank" rel="noreferrer noopener"><Telegram /></a>
         <a style={{color: "inherit"}} href="https://line.me/ti/p/R_4xAMO1jU" target="_blank" rel="noreferrer noopener"><Icon><img style={{ display:'flex',height:'inherit',width:'inherit',}} alt="line icon" src={lineicon} /></Icon></a>
       </Stack>
-
+      <p></p>
+      <a style={routerLinkStyle} href="https://www.veikkasakarijunttila.com/">English</a>
     </Box>
   ); }
 };

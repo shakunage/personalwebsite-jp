@@ -22,9 +22,9 @@ const ContactForm = () => {
   if (submitted) {
     return (
       <span style={{position: "center"}}>
-        <h2>Thank you!</h2>
+        <h2>ご連絡ありがとうございます。</h2>
         <br></br>
-        I'll be in touch with you soon.
+        近日中にお返事させていただきます。
       </span>
     );
   }
@@ -37,7 +37,7 @@ const ContactForm = () => {
       justifyContent: "start",
       height:"100vh",
       width: isDesktop ? "60%" : "90%"}}>
-      <h1>contact form</h1>
+      <h1>連絡申込</h1>
       <form
       action={FORM_ENDPOINT}
       onSubmit={handleSubmit}
@@ -45,16 +45,16 @@ const ContactForm = () => {
       target="_blank"
     >
       <div>
-        <Input fullWidth type="text" placeholder="Your name" name="name" required />
+        <Input fullWidth type="text" placeholder="お名前" name="name" required />
       </div>
       <div>
-        <Input fullWidth type="email" placeholder="Email" name="email" required />
+        <Input fullWidth type="email" placeholder="メールアドレス" name="email" required />
       </div>
       <div>
-        <TextField fullWidth multiline placeholder="Your message" name="message" required />
+        <TextField fullWidth multiline placeholder="メッセージ" name="message" required />
       </div>
       <div>
-        <Button fullWidth type="submit"> Send a message </Button>
+        <Button fullWidth type="submit">送信</Button>
       </div>
     </form>
     </Box>

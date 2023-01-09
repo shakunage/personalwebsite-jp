@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import resumefile from "../assets/pdfs/resume.pdf"
+import resumefile from "../assets/pdfs/rirekisho.pdf"
 
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
 
@@ -22,10 +22,12 @@ const Resume = () => {
         justifyContent: "start",
         height:"100vh",
         width: isDesktop ? "60%" : "90%"}}>
-        <h1>resume</h1>
-        <Button style={{justifyContent: "flex-start"}}><a style={{color: "inherit", textDecoration: "inherit"}} href={resumefile} download>download resume</a></Button>
+        <h1>履歴</h1>
+        <Button style={{justifyContent: "flex-start"}}><a style={{color: "inherit", textDecoration: "inherit"}} href={resumefile} download>履歴書をダウンロードする</a></Button>
         <Document file={resumefile}>
         <Page width={isDesktop ? 550 : 350} pageNumber={1} />
+        <br></br>
+        <Page width={isDesktop ? 550 : 350} pageNumber={2} />
         </Document>
       </Box>
     </>
