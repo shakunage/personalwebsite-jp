@@ -65,6 +65,10 @@ const Sidebar = () => {
         履歴
       </Link>
 
+      <Link style={routerLinkStyle} to="/shokumukeireki">
+        職務経歴
+      </Link>
+
       <Link style={routerLinkStyle} to="/contact">
           連絡申込
       </Link>

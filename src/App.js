@@ -7,6 +7,7 @@ import Blog from "./components/Blog";
 import Home from "./components/Home";
 import About from "./components/About";
 import Resume from "./components/Resume";
+import Shokumukeireki from "./components/Shokumukeireki";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import BlogPost from "./components/BlogPost";
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/shokumukeireki" element={<Shokumukeireki />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs/:id" element={<BlogPost blog={blog} />} />
